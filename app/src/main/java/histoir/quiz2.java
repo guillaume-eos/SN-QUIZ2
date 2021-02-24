@@ -12,7 +12,7 @@ public class quiz2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(activity_quiz3);
+        super.onCreate(savedInstanceState);dxdfdxfdxdfxf
+        setContentView(activity_quiz3);xfdfdx
     }
-}
+}dfdfdf
