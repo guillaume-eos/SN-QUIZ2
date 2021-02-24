@@ -10,15 +10,15 @@
 
     <TextView
         android:id="@+id/activity_question11_txt"
-        android:layout_width="match_parent"
+        android:layout_width="397dp"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:layout_margin="5dp"
-        android:textSize="36.6dp"
-        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
         android:text="question"
-        tools:ignore="MissingConstraints"
-        android:gravity="center_horizontal" />
+        android:textAlignment="center"
+        android:textSize="30sp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/activity_reponse11_btn"

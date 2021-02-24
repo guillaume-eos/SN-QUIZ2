@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+import java.util.Random;
 import com.example.sn_quiz.R;
 
 import controleur.MainActivity;
@@ -64,7 +64,7 @@ public class quiz extends AppCompatActivity {
         /*9*///{"", "", "", "", "", ""},
 
 
-                /*n*///{"", "", "", "", "", ""},
+        /*n*///{"", "", "", "", "", ""},
         };
 
         super.onCreate(savedInstanceState);
@@ -77,14 +77,16 @@ public class quiz extends AppCompatActivity {
         suite = (Button) findViewById(R.id.activity_suite1_btn);
         NbPoint1 = (TextView) findViewById(R.id.activity_NbPoint1_txt);
 
-        question11.setText(questionsMUSIQUE[0][0]);
-        reponse11.setText(questionsMUSIQUE[0][1]);
+        int questionChoisi = (int) ((Math.random() * (0 - 4)) + 0);
+
+        question11.setText(questionsMUSIQUE[questionChoisi][0]);
+        reponse11.setText(questionsMUSIQUE[questionChoisi][1]);
         reponse11.setBackgroundColor(Color.parseColor("#FF000000"));
-        reponse21.setText(questionsMUSIQUE[0][2]);
+        reponse21.setText(questionsMUSIQUE[questionChoisi][2]);
         reponse21.setBackgroundColor(Color.parseColor("#FF000000"));
-        reponse31.setText(questionsMUSIQUE[0][3]);
+        reponse31.setText(questionsMUSIQUE[questionChoisi][3]);
         reponse31.setBackgroundColor(Color.parseColor("#FF000000"));
-        reponse41.setText(questionsMUSIQUE[0][4]);
+        reponse41.setText(questionsMUSIQUE[questionChoisi][4]);
         reponse41.setBackgroundColor(Color.parseColor("#FF000000"));
 
         suite.setEnabled(false);
