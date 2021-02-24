@@ -20,7 +20,7 @@ public class gameActivity<score> extends AppCompatActivity {
     private Button GAME1;
     private Button GAME2;
     private Button GAME3;
-    private Button GAME4;     q
+    private Button GAME4;
     private TextView score1;
     private TextView score2;
     private TextView score3;
