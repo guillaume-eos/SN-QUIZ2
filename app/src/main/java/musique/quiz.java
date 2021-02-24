@@ -53,15 +53,15 @@ public class quiz extends AppCompatActivity {
 
         //Question | Op1 | Op2 | Op3 | Op4 | Bonne Réponse
         String[][] questionsMUSIQUE = {
-        /*1*/{"La chanteuse londonienne Miss Adkins est mieux connue sous quel nom?", "Adele", "Élisabeth", "Jessica Petenon", "Jessie J", "Adele"},
-        /*2*/{"Quel chanteuse a chanté la chanson «Like a Virgin»?", "Madonna", "Miley Cyrus", "Cyndi Lauper", "Cheryl Fernandez-Versini", "Madonna"},
-        /*3*/{"Qui est devenu célèbre en 2008 avec la sortie du single I Kissed a Girl?", "Madonna", "Katy Perry", "Selena Gomez", "Justin Bieber", "Katy Perry"},
-        /*4*/{"Combien de cordes un violon a-t-il habituellement?", "Cinq", "Quatre", "Six", "Sept", "Quatre"},
-        /*5*/{"Dans quelle ville américaine Elvis a-t-il été découvert mort en 1977?", "Memphis", "Los Angeles", "Las Vegas", "Macaé", "Memphis"}
+        /*0*/{"La chanteuse londonienne Miss Adkins est mieux connue sous quel nom?", "Adele", "Élisabeth", "Jessica Petenon", "Jessie J", "Adele"},
+        /*1*/{"Quel chanteuse a chanté la chanson «Like a Virgin»?", "Madonna", "Miley Cyrus", "Cyndi Lauper", "Cheryl Fernandez-Versini", "Madonna"},
+        /*2*/{"Qui est devenu célèbre en 2008 avec la sortie du single I Kissed a Girl?", "Madonna", "Katy Perry", "Selena Gomez", "Justin Bieber", "Katy Perry"},
+        /*3*/{"Combien de cordes un violon a-t-il habituellement?", "Cinq", "Quatre", "Six", "Sept", "Quatre"},
+        /*4*/{"Dans quelle ville américaine Elvis a-t-il été découvert mort en 1977?", "Memphis", "Los Angeles", "Las Vegas", "Macaé", "Memphis"}
+        /*5*///{"", "", "", "", "", ""},
         /*6*///{"", "", "", "", "", ""},
         /*7*///{"", "", "", "", "", ""},
         /*8*///{"", "", "", "", "", ""},
-        /*9*///{"", "", "", "", "", ""},
 
 
         /*n*///{"", "", "", "", "", ""},
@@ -82,44 +82,75 @@ public class quiz extends AppCompatActivity {
             //if not dans ll'array historique
             //Sinon, repeter test aleatoire
         }*/
+        int questionChoisi = 2;
+        //questionChoisi = (int) ((Math.random() * (1 - 4)) + 1); //ça ne marche pas
 
-        int questionChoisi = (int) ((Math.random() * (1 - 4)) + 1);
+      //  public void ReecrierQuestions() { /*Fonction pour changer de question chaque fois*/
+            question11.setText(questionsMUSIQUE[questionChoisi][0]);
+            reponse11.setText(questionsMUSIQUE[questionChoisi][1]);
+            reponse11.setBackgroundColor(Color.parseColor("#FF000000"));
+            reponse21.setText(questionsMUSIQUE[questionChoisi][2]);
+            reponse21.setBackgroundColor(Color.parseColor("#FF000000"));
+            reponse31.setText(questionsMUSIQUE[questionChoisi][3]);
+            reponse31.setBackgroundColor(Color.parseColor("#FF000000"));
+            reponse41.setText(questionsMUSIQUE[questionChoisi][4]);
+            reponse41.setBackgroundColor(Color.parseColor("#FF000000"));
 
-        question11.setText(questionsMUSIQUE[questionChoisi][0]);
-        reponse11.setText(questionsMUSIQUE[questionChoisi][1]);
-        reponse11.setBackgroundColor(Color.parseColor("#FF000000"));
-        reponse21.setText(questionsMUSIQUE[questionChoisi][2]);
-        reponse21.setBackgroundColor(Color.parseColor("#FF000000"));
-        reponse31.setText(questionsMUSIQUE[questionChoisi][3]);
-        reponse31.setBackgroundColor(Color.parseColor("#FF000000"));
-        reponse41.setText(questionsMUSIQUE[questionChoisi][4]);
-        reponse41.setBackgroundColor(Color.parseColor("#FF000000"));
+            suite.setEnabled(false);
+            juste1 = 0;
 
-        suite.setEnabled(false);
-        juste1 = 0;
-
+      //  };
 
 
 
         reponse11.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-                reponse11.setBackgroundColor(Color.parseColor("#90EE90"));
-                reponse21.setBackgroundColor(Color.parseColor("#FF0000"));
-                reponse31.setBackgroundColor(Color.parseColor("#FF0000"));
-                reponse41.setBackgroundColor(Color.parseColor("#FF0000"));
-                suite.setEnabled(true);
-                reponse11.setEnabled(false);
-                reponse21.setEnabled(false);
-                reponse31.setEnabled(false);
-                reponse41.setEnabled(false);
-                juste1++;
-                NbPoint1.setText("nombre de point : " + juste1);
+                //ChangerColeurs(texte du button; array)
+
+                MontrerReponse;
             }
         });
 
-        reponse21.setOnClickListener(new View.OnClickListener() {
+
+         public static void MontrerReponse {
+             if (questionsMUSIQUE[questionChoisi][1] == questionsMUSIQUE[questionChoisi][5]) {
+                 reponse11.setBackgroundColor(Color.parseColor("#90EE90"));
+                 juste1++;
+             } else reponse11.setBackgroundColor(Color.parseColor("#FF0000"));
+
+             if (questionsMUSIQUE[questionChoisi][2] == questionsMUSIQUE[questionChoisi][5]) {
+                 reponse21.setBackgroundColor(Color.parseColor("#90EE90"));
+                 juste1++;
+             } else reponse21.setBackgroundColor(Color.parseColor("#FF0000"));
+
+             if (questionsMUSIQUE[questionChoisi][3] == questionsMUSIQUE[questionChoisi][5]) {
+                 reponse31.setBackgroundColor(Color.parseColor("#90EE90"));
+                 juste1++;
+             } else reponse31.setBackgroundColor(Color.parseColor("#FF0000"));
+
+             if (questionsMUSIQUE[questionChoisi][4] == questionsMUSIQUE[questionChoisi][5]) {
+                 reponse41.setBackgroundColor(Color.parseColor("#90EE90"));
+                 juste1++;
+             } else reponse41.setBackgroundColor(Color.parseColor("#FF0000"));
+
+             suite.setEnabled(true);
+             reponse11.setEnabled(false);
+             reponse21.setEnabled(false);
+             reponse31.setEnabled(false);
+             reponse41.setEnabled(false);
+
+             NbPoint1.setText("nombre de points : " + juste1);
+         }
+     }
+
+        reponse11.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {    int cu = 3;        }
+                });
+
+       /*
+       reponse21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //ChangerColeurs(texte du button; array)
@@ -163,7 +194,7 @@ public class quiz extends AppCompatActivity {
                 reponse31.setEnabled(false);
                 reponse41.setEnabled(false);
             }
-        });
+        });*/
 
 
     }
