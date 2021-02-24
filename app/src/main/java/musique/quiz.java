@@ -77,7 +77,13 @@ public class quiz extends AppCompatActivity {
         suite = (Button) findViewById(R.id.activity_suite1_btn);
         NbPoint1 = (TextView) findViewById(R.id.activity_NbPoint1_txt);
 
-        int questionChoisi = (int) ((Math.random() * (0 - 4)) + 0);
+        /*public int NombreAleatiore() {
+            return (int) ((Math.random() * (0 - 4)) + 0);
+            //if not dans ll'array historique
+            //Sinon, repeter test aleatoire
+        }*/
+
+        int questionChoisi = (int) ((Math.random() * (1 - 4)) + 1);
 
         question11.setText(questionsMUSIQUE[questionChoisi][0]);
         reponse11.setText(questionsMUSIQUE[questionChoisi][1]);
