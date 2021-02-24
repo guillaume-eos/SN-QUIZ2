@@ -31,7 +31,8 @@ public class quiz extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        public void ChangerColeurs(String reponse; String bonneReponse) {
+        //Fonction Pas Encore Finie
+        /*public void ChangerColeurs(String reponse; String bonneReponse) {
             if(reponse11.text == bonneReponse){
             reponse11.setBackgroundColor(Color.parseColor("#FF0000"));
             points +1;
@@ -48,20 +49,23 @@ public class quiz extends AppCompatActivity {
             reponse41.setEnabled(false);
 
         }
-
+*/
 
         //Question | Op1 | Op2 | Op3 | Op4 | Bonne Réponse
         String[][] questionsMUSIQUE = {
         /*1*/{"La chanteuse londonienne Miss Adkins est mieux connue sous quel nom?", "Adele", "Élisabeth", "Jessica Petenon", "Jessie J", "Adele"},
-        /*2*/{"La chanteuse londonienne Miss Adkins est mieux connue sous quel nom?", "Adele", "Élisabeth", "Jessica Petenon", "Jessie J", "Adele"}};
-        /*3*///{},
-        /*4*///{},
-        /*5*///{},
-        /*6*///{},
-        /*7*///{},
-        /*8*///{},
-        /*9*///{}
+        /*2*/{"Quel chanteuse a chanté la chanson «Like a Virgin»?", "Madonna", "Miley Cyrus", "Cyndi Lauper", "Cheryl Fernandez-Versini", "Madonna"},
+        /*3*/{"Qui est devenu célèbre en 2008 avec la sortie du single I Kissed a Girl?", "Madonna", "Katy Perry", "Selena Gomez", "Justin Bieber", "Katy Perry"},
+        /*4*/{"Combien de cordes un violon a-t-il habituellement?", "Cinq", "Quatre", "Six", "Sept", "Quatre"},
+        /*5*/{"Dans quelle ville américaine Elvis a-t-il été découvert mort en 1977?", "Memphis", "Los Angeles", "Las Vegas", "Macaé", "Memphis"}
+        /*6*///{"", "", "", "", "", ""},
+        /*7*///{"", "", "", "", "", ""},
+        /*8*///{"", "", "", "", "", ""},
+        /*9*///{"", "", "", "", "", ""},
 
+
+                /*n*///{"", "", "", "", "", ""},
+        };
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
