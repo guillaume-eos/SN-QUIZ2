@@ -15,4 +15,4 @@ public class quiz2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(activity_quiz3);
     }
-}
+}dfdfdf
